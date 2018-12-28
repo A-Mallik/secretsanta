@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+      <title>
+
+      </title>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <!-- ========================================= -->
+    <style>
+    /* --------------------------- */
+    .ball {
+      position: absolute;
+      border-radius: 100%;
+      opacity: 0.7;
+    }
+    /* --------------------------- */
+    body{
+      background-color: black;
+    }
+    #circle{
+      position:absolute;
+      width:20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: red;
+      top: 60%;
+      left:52%;
+      z-index: 999;
+
+    }
+    #circle2{
+      display:none;
+      position:absolute;
+      width:20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: red;
+      top: 60%;
+      left:52%;
+      z-index: 999;
+
+    }
+
+      #svgHolder{
+        /* background-color: */
+        position: absolute;
+        left:40%;
+        right:50%;
+        top:100px;
+      }
+
+      #bicep{
+        position:absolute;
+        left: 105px !important;
+        top: 225px !important;
+      }
+
+      #oblique{
+        position:absolute;
+        left: 168px !important;
+        top: 255px !important;
+      }
+
+
+      #pechover{
+        text-shadow: 0px 0px 10px #1d1a1a;
+        display:none;
+        position:absolute;
+        top: 100px;
+        left: 62%;
+        width: 200px;
+        height: 300px;
+        color: white;
+      }
+
+      #bicephover{
+        text-shadow: 0px 0px 10px #1d1a1a;
+        display:none;
+        position:absolute;
+        top: 100px;
+        left: 32%;
+        width: 200px;
+        height: 300px;
+        color: white;
+      }
+
+      #obliquehover{
+        text-shadow: 0px 0px 10px #1d1a1a;
+        display:none;
+        position:absolute;
+        top: 100px;
+        left: 20%;
+        width: 200px;
+        height: 300px;
+        color: white;
+      }
+
+      #myVideo{
+        position:absolute;
+        left:33%;
+        top: 55%;
+      }
+    </style>
+    <!-- ========================================= -->
+
+    <body>
+
+
+<video id="myVideo" width="800" height="440">
+  <source src="Lol.mp4" type="video/mp4">
+
+  Your browser does not support HTML5 video.
+</video>
+
+
+      <div id="circle">
+
+      </div>
+      <div id="circle2">
+
+      </div>
+      <!-- ======================== -->
+
+      <!-- ======================== -->
+
+        <svg id="introBgSvg"></svg>
+      <div id="svgHolder">
+
+          <!-- <img id="pec" src="pec.svg" style="z-index: 800; position:absolute;left: 162px;top:154px; height:95px; " /> -->
+          <div id="pec"  style= " background-image:url('pec.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
+          </div>
+          <div id="bicep"  style= " background-image:url('bicep.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
+          </div>
+
+          <div id="oblique"  style= " background-image:url('oblique.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
+          </div>
+          <!-- <div id="pec2"  style= " background-image:url('pec2.svg');visibility:visible; background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
+          </div> -->
+          <!-- <img id="pic" src="pec2.svg" style="z-index: 999; position:absolute; height:900px; " /> -->
+          <img src="auto.svg" style="position:relative; height:900px;" />
+      </div>
+
+      <div id="pechover">
+         <h2>
+           Pectoralis major
+         </h2>
+
+         <p>
+           The pectoralis major (from Latin pectus, meaning 'breast') is a thick, fan-shaped muscle, situated at the chest (anterior) of the human body. It makes up the bulk of the chest muscles and lies under the breast. Below (deep to) the pectoralis major is the pectoralis minor, a thin, triangular muscle. In sports as well as bodybuilding, the pectoral muscles may colloquially be referred to as "pecs", "pectoral muscle" or "chest muscle" due to its being the larger and most superficial muscle in the chest area.
+         </p>
+
+
+      </div>
+
+      <div id="bicephover">
+         <h2>
+           Biceps
+         </h2>
+
+         <p>
+           The biceps, also biceps brachii (Latin for "two-headed muscle of the arm"), is a large muscle that lies on the front of the upper arm between the shoulder and the elbow. Both heads of the muscle arise on the scapula and join to form a single muscle belly which is attached to the upper forearm. While the biceps crosses both the shoulder and elbow joints, its main function is at the elbow where it flexes the forearm and supinates the forearm. Both these movements are used when opening a bottle with a corkscrew: first biceps unscrews the cork (supination), then it pulls the cork out.
+         </p>
+
+
+      </div>
+
+      <div id="obliquehover">
+         <h2>
+           Abdominal external oblique muscle
+         </h2>
+
+         <p>
+           The external oblique is situated on the lateral and anterior parts of the abdomen. It is broad, thin, and irregularly quadrilateral, its muscular portion occupying the side, its aponeurosis the anterior wall of the abdomen. In most humans (especially females), the oblique is not visible, due to subcutaneous fat deposits and the small size of the muscle.
+
+It arises from eight fleshy digitations, each from the external surfaces and inferior borders of the fifth to twelfth ribs (lower eight ribs). These digitations are arranged in an oblique line which runs inferiorly and anteriorly, with the upper digitations being attached close to the cartilages of the corresponding ribs, the lowest to the apex of the cartilage of the last rib, the intermediate ones to the ribs at some distance from their cartilages.
+         </p>
+
+
+      </div>
+
+
+
+
+
+
+
+    <script>
+    // ==================================
+    // Some random colors
+    const colors = ["#ebf0f2", "#cfc9c9", "#dfeaf0", "#ebf0f2", "#dfeaf0"];
+
+    const numBalls = 500;
+    const balls = [];
+
+    for (let i = 0; i < numBalls; i++) {
+      let ball = document.createElement("div");
+      ball.classList.add("ball");
+      ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+      ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+      ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+      ball.style.transform = `scale(${Math.random()})`;
+      ball.style.width = `${Math.random()}em`;
+      ball.style.height = ball.style.width;
+
+      balls.push(ball);
+      document.body.append(ball);
+    }
+
+    // Keyframes
+    balls.forEach((el, i, ra) => {
+      let to = {
+        x: Math.random() * (i % 2 === 0 ? -11 : 11),
+        y: Math.random() * 12
+      };
+
+      let anim = el.animate(
+        [
+          { transform: "translate(0, 0)" },
+          { transform: `translate(${to.x}rem, ${to.y}rem)` }
+        ],
+        {
+          duration: (Math.random() + 1) * 2000, // random duration
+          direction: "alternate",
+          fill: "both",
+          iterations: Infinity,
+          easing: "ease-in-out"
+        }
+      );
+    });
+    // ==================================
+
+    $(document).ready(function(){
+
+
+      $("#pec").on("click", function(){
+
+              if($("#pechover").css('display') == "block"){
+                $("#pechover").css({"display":"none"});
+              }
+              else{
+                    $("#pechover").css({"display":"block"});
+              }
+
+
+      });
+
+      $("#bicep").on("click", function(){
+
+              if($("#bicephover").css('display') == "block"){
+                $("#bicephover").css({"display":"none"});
+              }
+              else{
+                    $("#bicephover").css({"display":"block"});
+              }
+
+
+      });
+
+      $("#oblique").on("click", function(){
+
+              if($("#obliquehover").css('display') == "block"){
+                $("#obliquehover").css({"display":"none"});
+              }
+              else{
+                    $("#obliquehover").css({"display":"block"});
+              }
+
+
+      });
+
+
+
+
+
+
+  });
+
+  var vid = document.getElementById("myVideo");
+
+  function playVid() {
+    vid.play();
+  }
+
+  function pauseVid() {
+    vid.pause();
+  }
+
+  $("#circle").on("click",function(){
+
+             vid.play();
+              $("#circle").css({"display":"none"});
+              $("#circle2").css({"display":"block"});
+                 $("#myVideo").css({"display":"block"});
+
+             // if($("#bicephover").css('display') == "none"){
+             //   $("#bicephover").css({"display":"none"});
+             // }
+             // else{
+             //       $("#bicephover").css({"display":"block"});
+             // }
+
+  });
+
+  $("#circle2").on("click",function(){
+
+             vid.pause();
+             $("#myVideo").css({"display":"none"});
+              $("#circle").css({"display":"block"});
+              $("#circle2").css({"display":"none"});
+
+
+  });
+
+
+
+
+    </script>
+
+
+    </body>
+
+</html>
