@@ -31,8 +31,11 @@
     }
     /* --------------------------- */
     body{
-      background-color: black;
+      background-color: #1f2233;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%232a2a36' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%234a553f'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
     }
+    /* --------------------------- */
+
     #circle{
       position:absolute;
       width:20px;
@@ -77,6 +80,37 @@
         top: 255px !important;
       }
 
+      #abs{
+        position:absolute;
+        left: 200px !important;
+        top: 240px !important;
+        height: 110px !important;
+
+      }
+
+      #santa{
+        position:absolute;
+        left: 176px !important;
+        top: -30px !important;
+        height: 110px !important;
+
+      }
+
+      #santa2{
+        position:absolute;
+        left: 176px !important;
+        top: -30px !important;
+        height: 110px !important;
+
+      }
+
+      #abductor{
+        position:absolute;
+        left: 150px !important;
+        top: 445px !important;
+        height: 150px !important;
+      }
+
 
       #pechover{
         text-shadow: 0px 0px 10px #1d1a1a;
@@ -112,29 +146,48 @@
       }
 
       #myVideo{
+        display:none;
         position:absolute;
-        left:33%;
-        top: 55%;
+
+        top: 5%;
       }
+
+      #abshover{
+        text-shadow: 0px 0px 10px #1d1a1a;
+        display:none;
+        position:absolute;
+        top: 100px;
+        left: 30%;
+        width: 200px;
+        height: 300px;
+        color: white;
+      }
+      #abducthover{
+        text-shadow: 0px 0px 10px #1d1a1a;
+        display:none;
+        position:absolute;
+        top: 100px;
+        left: 62%;
+        width: 200px;
+        height: 300px;
+        color: white;
+      }
+
+
     </style>
     <!-- ========================================= -->
 
     <body>
 
 
-<video id="myVideo" width="800" height="440">
-  <source src="Lol.mp4" type="video/mp4">
+<video id="myVideo" width="1600" height="880">
+  <source src="frosty.mp4" type="video/mp4">
 
   Your browser does not support HTML5 video.
 </video>
 
 
-      <div id="circle">
 
-      </div>
-      <div id="circle2">
-
-      </div>
       <!-- ======================== -->
 
       <!-- ======================== -->
@@ -145,15 +198,34 @@
           <!-- <img id="pec" src="pec.svg" style="z-index: 800; position:absolute;left: 162px;top:154px; height:95px; " /> -->
           <div id="pec"  style= " background-image:url('pec.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
           </div>
+          <div id="santa"  style= " background-image:url('SantaHat.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
+          </div>
+          <div id="santa2"  style= " background-image:url('SantaHat.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
+          </div>
           <div id="bicep"  style= " background-image:url('bicep.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
           </div>
 
           <div id="oblique"  style= " background-image:url('oblique.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
           </div>
+
+          <div id="abs"  style= " background-image:url('abs.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
+          </div>
+          <div id="abductor"  style= " background-image:url('abductor.svg'); background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px;  width:200px; ">
+          </div>
           <!-- <div id="pec2"  style= " background-image:url('pec2.svg');visibility:visible; background-repeat: no-repeat; background-size:contain;z-index: 800; position:absolute;left: 162px;top:154px; height:95px; width:200px; ">
           </div> -->
           <!-- <img id="pic" src="pec2.svg" style="z-index: 999; position:absolute; height:900px; " /> -->
           <img src="auto.svg" style="position:relative; height:900px;" />
+      </div>
+
+      <div style="position:relative; top:-105px; left:20px; text-align:center; color:white;">
+        <h2 >
+          Click the body parts to see info!
+          Click the hat for something more festive!
+        </h2>
+        <p style="position:relative; top:-10px; left:-260px; text-align:center; color:white;">
+          Click the body parts again to remove the text (in case the text overlaps)
+        </p>
       </div>
 
       <div id="pechover">
@@ -191,6 +263,29 @@
 It arises from eight fleshy digitations, each from the external surfaces and inferior borders of the fifth to twelfth ribs (lower eight ribs). These digitations are arranged in an oblique line which runs inferiorly and anteriorly, with the upper digitations being attached close to the cartilages of the corresponding ribs, the lowest to the apex of the cartilage of the last rib, the intermediate ones to the ribs at some distance from their cartilages.
          </p>
 
+
+      </div>
+
+
+      <div id="abshover">
+         <h2>
+           Rectus abdominis muscle
+         </h2>
+
+         <p>
+          The rectus abdominis muscle, also known as the "abdominal muscle" or "abs", is a paired muscle running vertically on each side of the anterior wall of the human abdomen, as well as that of some other mammals. There are two parallel muscles, separated by a midline band of connective tissue called the linea alba. It extends from the pubic symphysis, pubic crest and pubic tubercle inferiorly, to the xiphoid process and costal cartilages of ribs V to VII superiorly.[1] The proximal attachments are the pubic crest and the pubic symphysis. It attaches distally at the costal cartilages of ribs 5-7 and the xiphoid process of the sternum
+        </p>
+
+      </div>
+
+      <div id="abducthover">
+         <h2>
+           Adductor brevis muscle
+         </h2>
+
+         <p>
+          The adductor brevis is a muscle in the thigh situated immediately deep to the pectineus and adductor longus. It belongs to the adductor muscle group. The main function of the adductor brevis is to pull the thigh medially.[1] The adductor brevis and the rest of the adductor muscle group is also used to stabilize left to right movements of the trunk, when standing on both feet, or to balance when standing on a moving surface. The adductor muscle group is used pressing the thighs together to ride a horse, and kicking with the inside of the foot in soccer or swimming. Last, they contribute to flexion of the thigh when running or against resistance (squats, jumping, etc.).
+        </p>
 
       </div>
 
@@ -284,6 +379,31 @@ It arises from eight fleshy digitations, each from the external surfaces and inf
 
       });
 
+      $("#abs").on("click", function(){
+
+              if($("#abshover").css('display') == "block"){
+                $("#abshover").css({"display":"none"});
+              }
+              else{
+                    $("#abshover").css({"display":"block"});
+              }
+
+
+      });
+
+      $("#abductor").on("click", function(){
+
+              if($("#abducthover").css('display') == "block"){
+                $("#abducthover").css({"display":"none"});
+              }
+              else{
+                    $("#abducthover").css({"display":"block"});
+              }
+
+
+      });
+
+
 
 
 
@@ -301,29 +421,20 @@ It arises from eight fleshy digitations, each from the external surfaces and inf
     vid.pause();
   }
 
-  $("#circle").on("click",function(){
+
+  $("#santa").on("click",function(){
 
              vid.play();
-              $("#circle").css({"display":"none"});
-              $("#circle2").css({"display":"block"});
+              $("#santa").css({"display":"none"});
+              $("#santa2").css({"display":"block"});
                  $("#myVideo").css({"display":"block"});
-
-             // if($("#bicephover").css('display') == "none"){
-             //   $("#bicephover").css({"display":"none"});
-             // }
-             // else{
-             //       $("#bicephover").css({"display":"block"});
-             // }
-
   });
 
-  $("#circle2").on("click",function(){
-
+  $("#santa2").on("click",function(){
              vid.pause();
              $("#myVideo").css({"display":"none"});
-              $("#circle").css({"display":"block"});
-              $("#circle2").css({"display":"none"});
-
+              $("#santa").css({"display":"block"});
+              $("#santa2").css({"display":"none"});
 
   });
 
